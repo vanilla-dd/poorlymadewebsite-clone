@@ -236,11 +236,8 @@ header {
 /* media querys */
 /*              */
 /* tablet */
-@media (700px<width < 1000px) {
-  body {
-    /* background-color: red; */
-    padding: 2rem 3rem;
-  }
+@media (650px<width < 1000px) {
+  section,
   .heading {
     max-width: 40ch;
   }
@@ -259,9 +256,9 @@ header {
 }
 /* desktop */
 @media (width>1000px) {
-  body {
-    /* background-color: red; */
-    padding: 1rem 5rem;
+  section,
+  heading {
+    padding: 1.75rem 2.5rem;
   }
   .heading {
     max-width: 60ch;
