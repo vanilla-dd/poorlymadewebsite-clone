@@ -237,7 +237,8 @@ header {
 /*              */
 /* tablet */
 @media (650px<width < 1000px) {
-  c .heading {
+  section,
+  .heading {
     max-width: 40ch;
   }
   p {
