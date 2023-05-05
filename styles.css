@@ -1,0 +1,328 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+ul > li {
+  color: white;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+  font: inherit;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+body {
+  background-color: black;
+}
+/*                */
+/* Header section */
+/*                */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h3 {
+  color: white;
+  font-size: larger;
+}
+nav li,
+.header__button {
+  display: none;
+}
+/*               */
+/* first section */
+/*               */
+.heading {
+  max-width: 30ch;
+  color: white;
+  font-size: xx-large;
+  line-height: 1.2;
+  font-weight: 500;
+}
+.about {
+  color: white;
+  font-weight: lighter;
+  max-width: 45ch;
+  margin: 0.5rem 0 0 0;
+  font-size: large;
+}
+.logos {
+  display: grid;
+  grid-template-areas:
+    "walmart JPmorgan"
+    "visa    tinder"
+    "samsung verizon";
+  padding: 3rem;
+  gap: 1.15rem;
+}
+.walmart {
+  grid-area: walmart;
+}
+.visa {
+  grid-area: visa;
+}
+.smasung {
+  grid-area: samsung;
+}
+.jpmorgan {
+  grid-area: JPmorgan;
+}
+.tinder {
+  grid-area: tinder;
+}
+.verizon {
+  grid-area: verizon;
+}
+.left {
+  justify-self: end;
+}
+.right {
+  justify-self: start;
+}
+p {
+  color: rgb(106, 106, 106);
+}
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+.flex > p {
+  margin: 0 0 1rem 0;
+}
+.link {
+  font-size: xx-large;
+  text-decoration: transparent;
+  color: white;
+  margin: 1rem 0;
+}
+section,
+header {
+  padding: 2rem 1rem;
+}
+.second,
+.foot {
+  background-color: rgb(58, 56, 59);
+}
+/*                      */
+/* first section images */
+/*                      */
+
+/*                     */
+/* first section links */
+/*                     */
+.spense a:hover {
+  color: blue;
+}
+/*                */
+/*                */
+/* second section */
+/*                */
+
+.second p {
+  margin-top: 1rem;
+}
+/*               */
+/* Third section */
+/*               */
+.section__three {
+  margin: 2rem 0 2rem 0;
+}
+/*                   */
+/* Transitions/hover */
+/*                   */
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(246, 246, 31);
+  font: bold;
+  border: none;
+  font-size: larger;
+  transition: all 500ms;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border: 1px solid rgb(0, 255, 4);
+  background-color: rgb(0, 0, 0);
+  color: rgb(246, 246, 31);
+}
+/*        */
+/* Footer */
+/*        */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+.socials {
+  display: flex;
+  list-style: none;
+  gap: 0.75rem;
+}
+/* hovers/transitions */
+.socials li {
+  transition: all 500ms;
+}
+.socials li:hover,
+.socials li a:focus-visible {
+  border-radius: 100vw;
+  scale: 1.5;
+}
+.twitter:hover,
+.linkdin:hover,
+.twitter a:focus-visible,
+.linkdin a:focus-visible {
+  background-color: rgb(0, 136, 255);
+}
+.github:hover,
+.github a:focus-visible {
+  background-color: black;
+}
+
+/*              */
+/* media querys */
+/*              */
+/* tablet */
+@media (700px<width < 1000px) {
+  body {
+    /* background-color: red; */
+    padding: 2rem 3rem;
+  }
+  .heading {
+    max-width: 40ch;
+  }
+  p {
+    size: large;
+  }
+  .about {
+    max-width: 60ch;
+  }
+  .logos {
+    grid-template-areas:
+      "walmart visa JPmorgan"
+      " samsung tinder verizon";
+    justify-content: space-around;
+  }
+}
+/* desktop */
+@media (width>1000px) {
+  body {
+    /* background-color: red; */
+    padding: 1rem 5rem;
+  }
+  .heading {
+    max-width: 60ch;
+  }
+  .header {
+    justify-content: space-between;
+  }
+  .hamburger {
+    display: none;
+  }
+  .header__button {
+    display: flex;
+    padding: 0.25rem 1.5rem;
+
+    margin: 0;
+  }
+  nav li {
+    display: flex;
+  }
+
+  li a {
+    list-style: none;
+    text-decoration: none;
+    font-size: larger;
+    transition: all 100ms;
+  }
+  li a:hover,
+  li a:focus-visible {
+    color: white;
+    scale: 1.1;
+    text-decoration-line: underline;
+  }
+  .navigation {
+    padding: 0;
+  }
+  .spense__img,
+  .yelp__img {
+    overflow: hidden;
+    max-width: max-content;
+  }
+  .spense__img img,
+  .yelp__img img {
+    transition: all 500ms;
+  }
+  .spense__img img:hover,
+  .yelp__img img:hover {
+    transform: scale(1.3);
+  }
+  .about {
+    max-width: 70ch;
+  }
+  .logos {
+    grid-template-areas: "walmart JPmorgan visa samsung tinder verizon";
+    justify-content: space-between;
+  }
+  .flex {
+    flex-direction: row;
+    gap: 2rem;
+    align-content: end;
+  }
+  p {
+    font-size: large;
+  }
+}
