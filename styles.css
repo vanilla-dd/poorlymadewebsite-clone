@@ -23,6 +23,7 @@ html,
 body {
   height: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 /*
     Typographic tweaks!
@@ -163,9 +164,9 @@ header {
 /*                     */
 /* first section links */
 /*                     */
-.spense a:hover {
+/* .spense a:hover {
   color: blue;
-}
+} */
 /*                */
 /*                */
 /* second section */
@@ -239,15 +240,25 @@ header {
 /* nav */
 @media (max-width: 1000px) {
   nav li {
-    list-style: circle;
+    list-style: none;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+  }
+  nav a {
+    transition: all 200ms;
+  }
+  nav a:hover {
+    transform: scale(1.1);
+    margin-left: 1rem;
+    color: rgb(155, 14, 226);
+    text-decoration: underline;
   }
   .hamburger {
     z-index: 9999;
     width: 2rem;
     background-color: transparent;
     background-repeat: no-repeat;
+
     aspect-ratio: 1;
     border: none;
     background-color: black;
@@ -272,6 +283,8 @@ header {
   }
   .hamburger[aria-expanded="true"] {
     background-image: url(./Assets/icons8-close.svg);
+    position: absolute;
+    inset: 30px 30px 0 auto;
   }
 }
 /* tablet */
@@ -318,6 +331,7 @@ header {
     list-style: none;
     text-decoration: none;
     font-size: larger;
+    color: rgb(186, 33, 241);
     transition: all 100ms;
   }
   li a:hover,
