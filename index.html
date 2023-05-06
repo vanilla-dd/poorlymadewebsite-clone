@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="main.js" defers></script>
+    <script src="main.js" defer></script>
     <title>Some website clone</title>
   </head>
   <body>
@@ -13,14 +13,14 @@
       <div class="header">
         <h3>Johnathan Specter</h3>
         <nav>
-          <ul class="flex navigation">
+          <ul class="flex primary-nav" id="primary-nav" data-visible="false">
             <li><a href="">About</a></li>
             <li><a href="">Home</a></li>
             <li><a href="">Main</a></li>
           </ul>
         </nav>
         <button class="btn header__button">Get Started</button>
-        <img class="hamburger" src="./Assets/Hamburger Menu.svg" alt="" />
+        <button class="hamburger" id="hamburger" aria-expanded="false"></button>
       </div>
     </header>
     <section>
